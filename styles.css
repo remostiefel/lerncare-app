@@ -1,0 +1,126 @@
+/* Grundlegende Stile und Variablen */
+:root {
+  --primary-color: #e6f2ff;
+  --secondary-color: #3498db;
+  --accent-color: #2ecc71;
+  --text-color: #333;
+  --hover-color: #bde0ff;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  margin: 0;
+  padding: 0;
+}
+
+.chapter {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Überschriften */
+h2 {
+  color: var(--secondary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 10px;
+}
+
+h3 {
+  color: var(--secondary-color);
+}
+
+/* Fallvignette */
+.vignette {
+  background-color: white;
+  border-left: 5px solid var(--secondary-color);
+  padding: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Reflexionsfrage */
+.reflection-question {
+  background-color: var(--hover-color);
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+/* Antwortoptionen */
+.answer-options {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.answer {
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.answer:hover {
+  background-color: var(--hover-color);
+}
+
+.answer.selected {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.answer h4 {
+  margin-top: 0;
+}
+
+.keywords {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.keywords li {
+  background-color: var(--hover-color);
+  color: var(--secondary-color);
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 0.9em;
+}
+
+/* Weiter-Button */
+#next-chapter {
+  background-color: var(--accent-color);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+#next-chapter:hover {
+  background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .chapter {
+    padding: 10px;
+  }
+  
+  .answer-options {
+    gap: 10px;
+  }
+}
