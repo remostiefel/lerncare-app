@@ -124,3 +124,33 @@ h3 {
     gap: 10px;
   }
 }
+
+.answer {
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.answer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.answer.selected {
+    border-color: var(--secondary-color);
+    background-color: var(--hover-color);
+}
+
+#next-chapter {
+    transition: all 0.3s ease;
+    opacity: 0.6;
+}
+
+#next-chapter:not(:disabled) {
+    opacity: 1;
+    cursor: pointer;
+}
+
+#next-chapter:not(:disabled):hover {
+    transform: translateY(-2px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
